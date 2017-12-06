@@ -1,0 +1,49 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.side-menu{
+    position: absolute;
+    background: whitesmoke;
+    height: calc(100% - 51px);
+    left: 0;
+    top: 51px;
+    width: 40%;    
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.map-container {
+    position: absolute;
+    width: 60%;   
+    height: calc(100% - 51px);
+    background: darkorchid;
+    top: 51px;
+    left: 40%;
+    -webkit-transition: .6s cubic-bezier(.42, 0, 0, .99);
+    -moz-transition: .6s cubic-bezier(.42, 0, 0, .99);
+    -ms-transition: .6s cubic-bezier(.42, 0, 0, .99);
+    -o-transition: .6s cubic-bezier(.42, 0, 0, .99);
+    transition: .6s cubic-bezier(.42, 0, 0, .99);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
