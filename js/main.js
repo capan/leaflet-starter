@@ -9,11 +9,9 @@
         L.marker([51.5, -0.09]).addTo(mymap)
             .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
     
+        var popup = L.popup();
         function onMapClick(e) {
-            popup
-                .setLatLng(e.latlng)
-                .setContent("You clicked the map at " + e.latlng.toString())
-                .openOn(mymap);
+           popup.setLatLng(e.latlng).setContent("You clicked the map at " + e.latlng.toString()).openOn(mymap);
         }
     
         mymap.on('click', onMapClick);
