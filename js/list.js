@@ -15,7 +15,7 @@ ls.addEventListener("click", function(e){
   }
 });
 
-var app = angular.module("myShoppingList", []);
+var app = angular.module("coordList", []);
 app.controller("myCtrl", function($scope) {
   $scope.products = ["deneme1","deneme2"];
   $scope.addItem = function(){
