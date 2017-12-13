@@ -13,5 +13,13 @@ ls.addEventListener("click", function(e){
       document.getElementById("h").innerHTML = "Polygon List";
       break;
   }
-
 });
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("p_list").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("Kiwi");
+    document.getElementById("p_list").innerHTML = fruits;
+}
