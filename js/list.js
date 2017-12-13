@@ -15,11 +15,20 @@ ls.addEventListener("click", function(e){
   }
 });
 
-
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("p_list").innerHTML = fruits;
-
-function myFunction() {
-    fruits.push("Kiwi");
-    document.getElementById("p_list").innerHTML = fruits;
-}
+var app = angular.module("myShoppingList", []);
+app.controller("myCtrl", function($scope) {
+  $scope.products = ["deneme1","deneme2"];
+  $scope.addItem = function(){
+    $scope.errortext = "";
+    if($scope.addMe){return;}
+    if($scope.products.indexOf($scope.addMe) == -1){
+      $scope.products.push($scope.addMe);
+    } else {
+      $scope.errortext = "Same Point Can't Be Added !";
+    }
+  }
+  $scope.removeItem = function(x){
+    $scope.errortext = "";
+    $scope.products.splice(x,1);
+  }
+});
