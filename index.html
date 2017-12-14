@@ -35,7 +35,6 @@
     </nav>
 
      
-
     <div class="side-menu">
 
     <select id="listtype" name="geom_type">
@@ -45,21 +44,20 @@
     </select>
 
     <button type="button" id="geoButton" onclick="showPosition()"style="position: absolute; right: 0";>Find!</button>
-    <h1 id="h"></h1>
+  
 
     <!-- angular list object-->
     <div ng-app="coordList" ng-cloak ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width:400px;">
     <header class="w3-container w3-light-grey w3-padding-16">
-    <h3>Points</h3>
+    <h3 id="h"></h3>
     </header>
-
     <ul class="w3-ul">
     <li ng-repeat="x in products" class="w3-padding-16">{{x}}<span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
     </ul>
-    <div class="w3-container w3-light-blue w3-padding-16">
-    <div class="w3-row w3-margin-bottom">
+    <div class="w3-container w3-light-grey w3-padding-16">
+    <div class="w3-row w3-margin-top">
     <div class="w3-col s10">
-    <input placeholder="Add shopping items here" ng-model="addMe" class="w3-input w3-border w3-padding">
+    <input placeholder="Add items here" ng-model="addMe" class="w3-input w3-border w3-padding">
     </div>
     <div class="w3-col s2">
     <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Add</button>
@@ -74,7 +72,7 @@
 
      <div class="map-container" id="map"> </div>
 
-       <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery-1.11.2.min.js" ></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/leaflet.js"></script>
@@ -82,8 +80,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <script src="js/position.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/position.js"></script>
         <script src="js/list.js"></script>
 
     </body>
