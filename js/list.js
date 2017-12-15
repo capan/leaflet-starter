@@ -1,12 +1,15 @@
-var ls = document.getElementById("listtype");
+var ls = document.getElementById("typeList");
 
 
 var app = angular.module("coordList", []);
 app.controller("myCtrl", function($scope) {
-  $scope.products = [1];
+  $scope.products = [];
   $scope.addItem = function(){
     $scope.errortext = "";
-    if($scope.addMe){return addMe;}
+    if(!$scope.addMe){
+      $scope.errortext = "You should add something !";
+      return addMe;
+    }
     if($scope.products.indexOf($scope.addMe) == -1){
       $scope.products.push($scope.addMe);
     } else {
@@ -20,8 +23,8 @@ app.controller("myCtrl", function($scope) {
 });
 
 ls.addEventListener("click", function(e){
-  var lo = document.getElementById("listtype").selectedIndex;
-  switch (document.getElementById("listtype").selectedIndex) {
+  var lo = document.getElementById("typeList").selectedIndex;
+  switch (document.getElementById("typeList").selectedIndex) {
     case 0:
       document.getElementById("h").innerHTML = "Point List";
       break;
