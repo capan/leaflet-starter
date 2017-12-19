@@ -8,11 +8,8 @@ function showPosition(position) {
       navigator.geolocation.getCurrentPosition(showPosition);
       uPosx =position.coords.latitude.toFixed(5);
       uPosy =position.coords.longitude.toFixed(5);
-
-      //document.getElementById("loca").innerHTML = "Latitude: " + position.coords.latitude +
-      //"<br>Longitude: " + position.coords.longitude;
-
-      L.marker([uPosx, uPosy]).addTo(mymap)
+     
+       L.marker([uPosx, uPosy]).addTo(mymap)
           .bindPopup('<b>Your Position</b><br/>'+uPosx+'<br/>'+uPosy).openPopup();
 
           mymap.setView([uPosx,uPosy],13);

@@ -2,17 +2,22 @@ var ls = document.getElementById("typeList");
 
 
 var app = angular.module("coordList", []);
+
 app.controller("myCtrl", function($scope) {
+  
   $scope.products = [];
   $scope.addItem = function(){
+    
     $scope.errortext = "";
+
     if(!$scope.addMe){
       $scope.errortext = "You should add something !";
       return addMe;
     }
     if($scope.products.indexOf($scope.addMe) == -1){
       $scope.products.push($scope.addMe);
-    } else {
+      $scope.products.indexOf($scope.addMe) = addCoord;
+          } else {
       $scope.errortext = "Same Point Can't Be Added !";
     }
   }
@@ -21,6 +26,8 @@ app.controller("myCtrl", function($scope) {
     $scope.products.splice(x,1);
   }
 });
+
+var myscope = angular.element("myCtrl").scope();
 
 ls.addEventListener("click", function(e){
   var lo = document.getElementById("typeList").selectedIndex;
