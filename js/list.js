@@ -35,6 +35,12 @@ app.controller("myCtrl", function ($scope) {
     $scope.errortext = "";
     $scope.products.splice(x, 1);
   }
+  $scope.edit = function(id) {
+    //search user and update it
+  $scope.objectIndex = id;
+   $scope.userObject = angular.copy($scope.products[id]);
+   console.log($scope.objectIndex);
+ }
 });
 
 var myscope = angular.element("myCtrl").scope();
