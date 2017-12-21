@@ -7,9 +7,12 @@
             maxZoom: 18,
             id: 'mapbox.streets'
         }).addTo(mymap);
-			  var popup = L.popup();
 
+              var popup = L.popup();
+              
         mymap.on('click', onMapClick);
+
+
  function onMapClick(e) {
            clickedCoord = e.latlng;
            popup.setLatLng(clickedCoord).setContent("You clicked the map at " + e.latlng.toString()).openOn(mymap);

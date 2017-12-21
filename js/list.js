@@ -17,13 +17,22 @@ app.controller("myCtrl", function ($scope) {
       var ekle = $scope.addMe.split(" ");
       if (ekle.length == 2) {
         $scope.products.push($scope.addMe);
-        MarkerNo = $scope.products.indexOf($scope.addMe)
+        MarkerNo = $scope.products.indexOf($scope.addMe);
+
+        // var container = L.DomUtil.create('div'),
+        // EditBtn = this.createButton('Edit This Point', container),
+        // DefineBtn = this.createButton('What is here?', container);
+        // div.innerHTML = ''+EditBtn+ '&nbsp;&nbsp;&nbsp;&nbsp;' + destBtn ; 
+        // L.DomEvent.on(EditBtn, 'click', () => {
+        //   alert("toto");
+        // });
+
         L.marker([ekle[0], ekle[1]]).addTo(mymap)
           .bindPopup('<b>My Marker' + MarkerNo + '</b> <br/>' + ekle[0] + '<br/>' + ekle[1]).openPopup();
         mymap.setView([ekle[0], ekle[1]], 13);
 
       } else {
-        $scope.errortext = "You should seperate Lat Lon with an empty space!";
+        $scope.errortext = "Latitude and Longitude Must Be Seperated With Empty Space! EG:32.42354 22.23523";
       }
     }
     else {
